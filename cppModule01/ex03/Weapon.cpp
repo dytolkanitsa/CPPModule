@@ -1,24 +1,18 @@
 # include "Weapon.hpp"
 
-Weapon::Weapon()
-{
+Weapon::Weapon() {
 }
 
-void	Weapon::setType(std::string weapon)
-{
+void	Weapon::setType(std::string weapon) {
 	weaponType = weapon;
 }
 
-// Weapon::Weapon(std::string weapon) : weaponType(weapon)
-// {
-// 	return ; 
-// }
+Weapon::Weapon(std::string weapon) : weaponType(weapon) {
+}
 
-std::string const	&Weapon::getType()
-{
+std::string const	&Weapon::getType() {
 	return weaponType;
 }
 
-Weapon::~Weapon()
-{
+Weapon::~Weapon() {
 }

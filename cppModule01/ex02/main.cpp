@@ -10,6 +10,9 @@ int	main(void)
 	std::string	&stringREF = str; // ссылки - указатель тоже, & - ссылка на //не могут быть нулевыми // нельзя переинциализировать
 	// ссылки более надежные, так как не могут быть нулевыми и не могут быть изменены позже
 	//  Указатели следует использовать только в тех ситуациях, когда ссылки являются недостаточно эффективными (при динамическом выделении памяти)
+	// std::cout << "str reference: " << stringREF << std::endl;
+	// std::cout << "str pointer: " << 	*stringPTR << std::endl;
+	// у ссылки нет оператора разоменования, они сразу работают со значением, на которое указывают
 	std::cout << "The address in memory of the string: " << &str << std::endl;
 	std::cout << "Adress using the pointer: " << stringPTR << std::endl; // адрес, который хранится в stringPTR
 	std::cout << "Adress using the reference: " << &stringREF << std::endl;
