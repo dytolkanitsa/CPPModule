@@ -4,23 +4,23 @@ Zombie::Zombie()
 {
 }
 
+void	Zombie::announce(void)
+{
+	std::cout << "Zombie " << this->zombieName << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
 Zombie::Zombie(std::string name)
 {
 	zombieName = name;
 	announce();
 }
 
-void	Zombie::announce(void)
+std::string	Zombie::getZombieName(void)
 {
-	std::cout << "Zombie " << this->zombieName << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-std::string	Zombie::returnName()
-{
-	return (zombieName);
+	return zombieName;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie " << returnName() << " destriyed" << std::endl;
+	std::cout << "Zombie " << getZombieName() << " destroyed" << std::endl;
 }
