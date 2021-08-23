@@ -3,6 +3,7 @@
 
 # include <string>
 # include <iostream>
+# include <fstream>
 
 class Replace
 {
@@ -11,12 +12,13 @@ private:
 	std::string _ReplaceString;
 	std::string _OldFilename;
 	std::string _NewFilename;
+	std::string	fileText;
 
 public:
 	Replace(char* OldFilename, char* s1, char* s2);
 	~Replace();
 
-	void	replace(char* OldFilename, char* s1, char* s2);
+	void	replace(void);
 };
 
 #endif

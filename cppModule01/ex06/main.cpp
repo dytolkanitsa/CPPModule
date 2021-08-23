@@ -1,15 +1,15 @@
-#include "Replace.hpp"
+#include "Karen.hpp"
 
 int	main(int argc, char **argv)
 {
-	if (argc != 4)
+	if (argc != 2)
 	{
 		std::cout << "Invalid amount of parametrs" << std::endl;
 		return 1;
 	}
 	else
 	{
-		Replace replace (argv[1], argv[2], argv[3]);
-		replace.replace();
+		Karen karen;
+		karen.complain(argv[1]);
 	}
 }
