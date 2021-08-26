@@ -1,5 +1,8 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap(void) {
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap (name)
 {
 	std::cout << "ScavTrap consructor called" << std::endl;
@@ -12,6 +15,18 @@ void	ScavTrap::attack(std::string const &target)
 {
 	std::cout << "ScavTrap " << _name << " attack " << target
 	<< ", causing " << _attackdamage << " points of damage!" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = copy;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap &scavTrap)
+{
+	ClapTrap::operator=(scavTrap);
+	return *this;
 }
 
 void	ScavTrap::takeDamage(unsigned int amount)

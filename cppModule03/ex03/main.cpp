@@ -7,24 +7,25 @@ int main(void)
 {
 	ClapTrap clapTrap("Arseniy");
 	ScavTrap scavTrap("Vitalik");
-	FragTrap fragTrap("TheThirdOne");
-	DiamondTrap diamondTrap("ThisOne");
+	FragTrap fragTrap("Anton");
+	DiamondTrap diamondTrap("Nikita");
 
 	clapTrap.attack("Gena");
 	scavTrap.attack("Zhora");
-	fragTrap.attack("TheFourthOne");
-	diamondTrap.attack("ThatOne");
+	fragTrap.attack("Kirill");
+	diamondTrap.attack("Dima");
 
-	clapTrap.takeDamage(2);
-	scavTrap.takeDamage(20);
+	clapTrap.beRepaired(12);
+	scavTrap.beRepaired(15);
+	fragTrap.beRepaired(30);
+	diamondTrap.beRepaired(50);
+
+	clapTrap.takeDamage(3);
+	scavTrap.takeDamage(10);
 	fragTrap.takeDamage(30);
-	diamondTrap.takeDamage(50);
-	clapTrap.beRepaired(3);
-	scavTrap.beRepaired(10);
-	fragTrap.beRepaired(100);
-	diamondTrap.beRepaired(300);
+	diamondTrap.takeDamage(15);
 
-	fragTrap.highFivesGuys();
 	scavTrap.guardGate();
+	fragTrap.highFivesGuys();
 	diamondTrap.whoAmI();
 }

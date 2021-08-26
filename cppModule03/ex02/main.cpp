@@ -6,11 +6,11 @@ int main(void)
 {
 	ClapTrap clapTrap("Arseniy");
 	ScavTrap scavTrap("Vitalik");
-	FragTrap fragTrap("TheThirdOne");
+	FragTrap fragTrap("Anton");
 
 	clapTrap.attack("Gena");
 	scavTrap.attack("Zhora");
-	fragTrap.attack("TheFourthOne");
+	fragTrap.attack("Kirill");
 
 	clapTrap.takeDamage(2);
 	scavTrap.takeDamage(20);

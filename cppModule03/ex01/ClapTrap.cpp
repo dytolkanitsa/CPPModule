@@ -1,5 +1,8 @@
 #include "ClpTrap.hpp"
 
+ClapTrap::ClapTrap(void) {
+}
+
 ClapTrap::ClapTrap(std::string name)
 {
 	std::cout << "ClapTrap consructor called" << std::endl;

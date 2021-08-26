@@ -1,44 +1,47 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name, int hitpoints, int energypoints, int attackdamage) : FragTrap()
-{
-	std::cout << "DiamondTrap consructor called" << std::endl;
-	_hitpoints = 100;
-	_energypoints = 100;
-	_attackdamage = 30;
+DiamondTrap::DiamondTrap(void) {
 }
 
-void	DiamondTrap::attack(std::string const &target)
+DiamondTrap::DiamondTrap(std::string name, int hitpoints, int energypoints, int attackdamage) :
+	ClapTrap (name, hitpoints, energypoints, attackdamage),
+	ScavTrap (name, hitpoints, energypoints, attackdamage),
+	FragTrap (name, hitpoints, energypoints, attackdamage)
 {
-	std::cout << "DiamondTrap " << _name << " attack " << target
-	<< ", causing " << _attackdamage << " points of damage!" << std::endl;
+	std::cout << "DiamondTrap consructor called" << std::endl;
+	ClapTrap::_name = name;
+	this->name = name + "_clap_name";
+	// std::cout << name << std::endl;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap &copy)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = copy;
+}
+
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap &diamondTrap)
+{
+	ClapTrap::operator=(diamondTrap);
+	return *this;
 }
 
 void	DiamondTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "DiamondTrap " << _name << " take " << amount
+	std::cout << "DiamondTrap " << name << "take " << amount
 	<< " points of damage!" << std::endl;
 }
 
 void	DiamondTrap::beRepaired(unsigned int	amount)
 {
-	std::cout << "DiamondTrap " << _name << " repaired " << amount
+	std::cout << "DiamondTrap " << name << " repaired " << amount
 	<< " of hit points!" << std::endl;
 }
 
 void	DiamondTrap::whoAmI()
 {
-
-}
-
-void	DiamondTrap::highFivesGuys()
-{
-	std::cout << "FragTrap " << _name << " gives high five" << std::endl;
-}
-
-void	DiamondTrap::guardGate()
-{
-	std::cout << "ScavTrap " << _name << " have enterred in Gate keeper mode" << std::endl;
+	std::cout << "ClapTrap name " << name << std::endl;
+	std::cout << "I'm " << ClapTrap::_name << std::endl;
 }
 
 DiamondTrap::~DiamondTrap(void)
