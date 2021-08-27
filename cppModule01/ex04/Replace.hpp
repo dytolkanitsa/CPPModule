@@ -17,7 +17,6 @@ private:
 public:
 	Replace(char* OldFilename, char* s1, char* s2);
 	~Replace();
-
 	void	replace(void);
 };
 

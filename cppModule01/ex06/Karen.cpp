@@ -23,6 +23,7 @@ void	Karen::error(void) {
 }
 
 void	Karen::complain(std::string level) {
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	void ((Karen::*functions[4]))(void);
 	
 	functions[0] = &Karen::debug;
@@ -30,7 +31,6 @@ void	Karen::complain(std::string level) {
 	functions[2] = &Karen::warning;
 	functions[3] = &Karen::error;
 	
-	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	int i;
 	for (i = 0; i < 4; i++)

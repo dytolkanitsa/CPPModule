@@ -2,9 +2,8 @@
 
 int	main(void)
 {
-	Zombie	*moarZombies;
+	Zombie	*moarZombies = NULL;
 
-	moarZombies = NULL;
-	moarZombies = 	moarZombies->zombieHorde(10, "Zombies");
+	moarZombies = 	moarZombies->zombieHorde(10, "ZombieHorde");
 	delete [] moarZombies;
 }

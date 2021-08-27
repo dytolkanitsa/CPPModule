@@ -10,7 +10,7 @@ void	HumanB::attack(void) {
 	}
 	else
 	{
-		std::cout << _name << " attacks with his " << (*this->_weapon).getType() << std::endl;
+		std::cout << _name << " attacks with his " << this->_weapon->getType() << std::endl;
 	}
 }
 

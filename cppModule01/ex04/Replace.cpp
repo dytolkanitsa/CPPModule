@@ -14,9 +14,20 @@ void	Replace::replace() {
 	if (!filein.is_open())
 	{
 		std::cout << "Could't open file" << std::endl;
+		return ;
 	}
 	else
 	{
+		char *buffer = new char[10];
+		filein.read(buffer, 10);
+		if (!filein)
+		{
+			std::cout << "File is empty" << std::endl;
+			return ;
+		}
+		delete [] buffer;
+		filein.close();
+		filein.open(this->_OldFilename.c_str());
 		getline(filein, this->fileText, '\0');
 		filein.close();
 	}

@@ -16,10 +16,10 @@ std::string	Zombie::getZombieName(void) {
 	return zombieName;
 }
 
-void	Zombie::giveName(std::string name) {
+void	Zombie::setName(std::string name) {
 	zombieName = name;
 }
 
 Zombie::~Zombie() {
-	std::cout << "Zombie " << getZombieName() << " destroyed" << std::endl;
+	std::cout << "Zombie " << getZombieName() << ": destroyed" << std::endl;
 }
