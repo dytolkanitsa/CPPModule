@@ -55,17 +55,11 @@ Fixed	Fixed::operator+(const Fixed &fixed) {
 }
 // префикс
 Fixed&	Fixed::operator++(void) {
-	if (_fixpointValue == 8)
-		_fixpointValue == 0;
-	else
 		++_fixpointValue;
 	return *this;
 }
 // префикс
 Fixed&	Fixed::operator--(void) {
-	if (_fixpointValue == 0)
-		_fixpointValue == 8;
-	else
 	--_fixpointValue;
 	return *this;
 }
