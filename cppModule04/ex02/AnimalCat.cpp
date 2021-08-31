@@ -15,7 +15,6 @@ void	Cat::makeSound() const
 Cat::Cat(const Cat &copy)
 {
 	std::cout << "Cat copy construcor called" << std::endl;
-	// type = copy.getType();
 	*this = copy;
 }
 

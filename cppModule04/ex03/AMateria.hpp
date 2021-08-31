@@ -1,5 +1,5 @@
 #ifndef AMATERIA_H
-# define AMATERIA
+# define AMATERIA_H
 
 # include <iostream>
 # include <string>
@@ -14,6 +14,7 @@ protected:
 public:
 	AMateria();
 	AMateria(std::string const & type);
+	AMateria(const AMateria &copy);
 	virtual ~AMateria();
 	AMateria& operator=(const AMateria &materia);
 	std::string const & getType() const; //Returns the materia type
