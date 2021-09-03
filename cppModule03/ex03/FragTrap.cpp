@@ -3,9 +3,11 @@
 FragTrap::FragTrap(void) {
 }
 
-FragTrap::FragTrap(std::string name, int hitpoints, int energypoints, int attackdamage) : 
-	ClapTrap (name, hitpoints, energypoints, attackdamage)
+FragTrap::FragTrap(int hitpoints, int energypoints, int attackdamage)
 {
+	(void)energypoints;
+	this->_hitpoints = hitpoints;
+	this->_attackdamage = attackdamage;
 	std::cout << "FragTrap consructor called" << std::endl;
 }
 

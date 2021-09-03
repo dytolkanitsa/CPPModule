@@ -7,7 +7,7 @@ class	FragTrap : virtual public ClapTrap
 {
 public:
 	FragTrap();
-	FragTrap(std::string name, int hitpoints = 100, int energypoints = 100, int attackdamage = 30);
+	FragTrap(int hitpoints, int energypoints, int attackdamage);
 	~FragTrap();
 	FragTrap(const FragTrap &copy);
 	FragTrap& operator=(const FragTrap &fragTrap);

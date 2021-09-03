@@ -3,10 +3,9 @@
 DiamondTrap::DiamondTrap(void) {
 }
 
-DiamondTrap::DiamondTrap(std::string name, int hitpoints, int energypoints, int attackdamage) :
-	ClapTrap (name, hitpoints, energypoints, attackdamage),
-	ScavTrap (name, hitpoints, energypoints, attackdamage),
-	FragTrap (name, hitpoints, energypoints, attackdamage)
+DiamondTrap::DiamondTrap(std::string name) :
+	ScavTrap (50, 50, 50),
+	FragTrap (200, 200, 200)
 {
 	std::cout << "DiamondTrap consructor called" << std::endl;
 	ClapTrap::_name = name;
@@ -28,7 +27,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &diamondTrap)
 
 void	DiamondTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "DiamondTrap " << name << "take " << amount
+	std::cout << "DiamondTrap " << name << " take " << amount
 	<< " points of damage!" << std::endl;
 }
 

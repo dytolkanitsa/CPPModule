@@ -14,7 +14,8 @@ protected:
 
 public:
 	ClapTrap();
-	ClapTrap(std::string name, int hitpoints = 10, int energypoints = 10, int attackdamage = 10);
+	ClapTrap(std::string name);
+	ClapTrap(int hitpoints, int energypoints, int attackdamage);
 	~ClapTrap();
 	ClapTrap(const ClapTrap &copy);
 	ClapTrap& operator=(const ClapTrap &clapTrap);

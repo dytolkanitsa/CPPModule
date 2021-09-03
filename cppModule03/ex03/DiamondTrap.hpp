@@ -10,8 +10,8 @@ protected:
 	std::string	name;
 public:
 	DiamondTrap();
-	DiamondTrap(std::string name, int hitpoints = 100, int energypoints = 100, int attackdamage = 30);
 	~DiamondTrap();
+	DiamondTrap(std::string name);
 	DiamondTrap(const DiamondTrap &copy);
 	DiamondTrap& operator=(const DiamondTrap &cdiamondTrap);
 	using ScavTrap::attack;

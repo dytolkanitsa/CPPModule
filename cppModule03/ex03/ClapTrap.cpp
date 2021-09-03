@@ -1,10 +1,20 @@
 #include "ClpTrap.hpp"
 
 ClapTrap::ClapTrap(void) {
+	std::cout << "ClapTrap consructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name, int hitpoints, int energypoints, int attackdamage) :
-	_name(name), _hitpoints(hitpoints), _energypoints(energypoints), _attackdamage(attackdamage)
+ClapTrap::ClapTrap(std::string name)
+{
+	this->_name = name;
+	this->_hitpoints = 100;
+	this->_energypoints = 100;
+	this->_attackdamage = 100;
+	std::cout << "ClapTrap consructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(int hitpoints, int energypoints, int attackdamage) :
+	_hitpoints(hitpoints), _energypoints(energypoints), _attackdamage(attackdamage)
 {
 	std::cout << "ClapTrap consructor called" << std::endl;
 }

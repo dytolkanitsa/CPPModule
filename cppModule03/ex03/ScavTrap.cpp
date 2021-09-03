@@ -3,9 +3,11 @@
 ScavTrap::ScavTrap(void) {
 }
 
-ScavTrap::ScavTrap(std::string name, int hitpoints, int energypoints, int attackdamage) : 
-	ClapTrap (name, hitpoints, energypoints, attackdamage)
+ScavTrap::ScavTrap(int hitpoints, int energypoints, int attackdamage)
 {
+	(void)hitpoints;
+	(void)attackdamage;
+	this->_energypoints = energypoints;
 	std::cout << "ScavTrap consructor called" << std::endl;
 }
 
