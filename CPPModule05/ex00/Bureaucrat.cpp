@@ -44,14 +44,14 @@ std::string Bureaucrat::getName(void)
 void	Bureaucrat::upGrade(void)
 {
 	grade--;
-	if (grade > 150)
+	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 }
 
 void	Bureaucrat::downGrade(void)
 {
 	grade++;
-	if (grade < 1)
+	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 }
 
