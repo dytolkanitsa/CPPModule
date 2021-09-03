@@ -10,7 +10,6 @@ DiamondTrap::DiamondTrap(std::string name) :
 	std::cout << "DiamondTrap consructor called" << std::endl;
 	ClapTrap::_name = name;
 	this->name = name + "_clap_name";
-	// std::cout << name << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)
