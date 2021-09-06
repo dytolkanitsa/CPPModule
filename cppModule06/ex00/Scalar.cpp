@@ -47,7 +47,7 @@ void	Scalar::convertToChar()
 void	Scalar::convertToInt()
 {
 	std::cout << "int: ";
-	if (arg.length() == 1 && !isdigit(arg[0])) // или !
+	if (arg.length() == 1 && !isdigit(arg[0]))
 	{
 		std::cout << static_cast<int>(arg[0]) << std::endl;
 		return ;

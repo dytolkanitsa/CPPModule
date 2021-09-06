@@ -7,13 +7,13 @@ class Awesome
 public:
 	Awesome (int n): _n(n) {};
 
-	bool	operator>(const Fixed &fixed) {return this->i > fixed.i;};
-	bool	operator<(const Fixed &fixed) {return this->i < fixed.i;};
-	bool	operator>=(const Fixed &fixed) {return this->i >= fixed.i;};
-	bool	operator<=(const Fixed &fixed) {return this->i <= fixed.i;};
-	bool	operator==(const Fixed &fixed) {return this->i == fixed.i;};
-	bool	operator!=(const Fixed &fixed) {return this->i != fixed.i;};
-
+	bool	operator==(Awesome const &rhs) {return (this->_n == rhs._n); }
+	bool	operator!=(Awesome const &rhs) {return (this->_n != rhs._n); }
+	bool	operator>(Awesome const &rhs) {return (this->_n > rhs._n); }
+	bool	operator<(Awesome const &rhs) {return (this->_n < rhs._n); }
+	bool	operator>=(Awesome const &rhs) {return (this->_n >= rhs._n); }
+	bool	operator<=(Awesome const &rhs) {return (this->_n <= rhs._n); }
+	int	getNbr() {return _n;};
 private:
 	int _n;
 };
@@ -45,11 +45,11 @@ int main(void)
 	std::cout << "max( e, f ) = " << ::max(e, f) << std::endl;
 
 
-	Fixed fixed_1(1);
-	Fixed fixed_2(10);
-	std::cout << "fixed_1: " << fixed_1.getNbr() << " fixed_2: " << fixed_2.getNbr() << std::endl;
-	std::cout << "max( fixed_1, fixed_2 ) = " << ::min(fixed_1, fixed_2).getNbr() << std::endl;
-	std::cout << "max( fixed_1, fixed_2 ) = " << ::max(fixed_1, fixed_2).getNbr() << std::endl;
+	Awesome awesome_1(1);
+	Awesome awesome_2(10);
+	std::cout << "awesome_1: " << awesome_1.getNbr() << " awesome_2: " << awesome_2.getNbr() << std::endl;
+	std::cout << "max( awesome_1, awesome_2 ) = " << ::min(awesome_1, awesome_2).getNbr() << std::endl;
+	std::cout << "max( awesome_1, awesome_2 ) = " << ::max(awesome_1, awesome_2).getNbr() << std::endl;
 
 	return (0);
 }

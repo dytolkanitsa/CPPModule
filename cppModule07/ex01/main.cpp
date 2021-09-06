@@ -2,17 +2,26 @@
 #include <string>
 #include "iter.hpp"
 
-template<typename T>
-void	print(T const &t)
+class Awesome
 {
-	if (t % 2 == 0)
-		std::cout << t << " делится на два" << std::endl;
-	else
-		std::cout << t << " не делится на два" << std::endl;
+public:
+	Awesome(void) : _n(42) {return; }
+	int get(void) const {return this->_n; }
+private:
+	int _n;
+};
+std::ostream& operator<<(std::ostream& o, Awesome const & rhs) {o << rhs.get(); return o;};
+template<typename T>
+void	print(T const &x)
+{
+	std::cout<< x << std::endl;
+	return ;
 }
 
 int	main(void)
 {
-	int mas[] = {1, 2 ,3};
-	iter(mas, 3, print);
+	int mas[] = {0, 1, 2 ,3, 4};
+	Awesome tab2[5];
+	iter(mas, 5, print);
+	iter(tab2,5,print);
 }

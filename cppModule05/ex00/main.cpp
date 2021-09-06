@@ -4,7 +4,7 @@ int main(void)
 {
 	try
 	{
-		Bureaucrat first_bureaucrat("Arsenyi", 100); //create with less than 150 grade
+		Bureaucrat first_bureaucrat("Arsenyi", 179); //create with less than 150 grade
 		Bureaucrat second_bureaucrat("Kirill", 30); //create with more than 1 grade
 		
 		Bureaucrat third_bureaucrat("Anton", 60); //check up grade 
